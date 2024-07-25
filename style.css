@@ -1,0 +1,104 @@
+.bgvideo {
+    filter: saturate(200%);
+    position: fixed;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+body {
+    margin: 0px;
+}
+button {
+    background-color: transparent;
+    border: 0px;
+}
+h1, h2, h3, h4, h5, p {
+    color: white;
+    margin: 0px;
+}
+.spacer {
+    height: 75px;
+}
+.navbar {
+    border-bottom: 2px solid rgba(255,255,255,.5);
+}
+.container {
+    background-color: rgba(0, 0, 32, .75);
+    z-index: 0;
+}
+.navbar .buttons h2 {
+    text-decoration: none;
+}
+@media screen and (max-width: 799px) {
+    .navbar .logo {
+        text-align: center;
+    }
+    .navbar .buttons {
+        text-align: center;
+    }
+    .mobile {
+        height: 75px;
+    }
+}
+@media screen and (min-width: 800px) {
+    .navbar .logo {
+        margin-left: 25px;
+    }
+    .navbar .buttons {
+        margin-right: 25px;
+    }
+    .container {
+        width: 60%;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+    .navbar .buttons {
+        display: contents;
+        margin-left: auto;
+    }
+    .navbar, .profile {
+        display: flex;
+    }
+    .navbar .logo {
+        flex: 25%;
+    }
+    .navbar .buttons {
+        flex: 75%;
+    }
+    .mobile {
+        height: 0px;
+    }
+}
+.PFP {
+    border-radius: 100%;
+    width: 90%;
+    height: auto;
+}
+.icons img {
+    width: 20%;
+    height: auto;
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-top: 10px;
+}
+.left, .right {
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+#about {
+    display: block;
+}
+#projects {
+    display: none;
+}
+#contact {
+    display: none;
+}
