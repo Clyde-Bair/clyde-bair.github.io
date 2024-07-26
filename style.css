@@ -74,7 +74,7 @@ h1, h2, h3, h4, h5, p {
         height: 0px;
     }
 }
-.PFP {
+#PFP {
     border-radius: 100%;
     width: 90%;
     height: auto;
