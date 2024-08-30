@@ -3,51 +3,289 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preload" href="BG.mp4">
     <link rel="stylesheet" href="style.css">
-    <script src="nav.js"></script>
-    <script src="pfp.js"></script>
-    <title>Clyde Bair</title>
+    <script src="script.js"></script>
+    <title>BLADES</title>
 </head>
-<body>
-    <video muted loop autoplay class="bgvideo"><source src="BG.mp4" type="video/mp4"></video>
+<body onload="openWindow()">
     <div class="container">
-        <div class="navbar">
-            <div class="logo">
-                <h2>Clyde Bair</h2>
-            </div>
-            <div class="buttons">
-                <button onclick="SwicthTab(0)"><h2>[About]</h2></button>
-                <button onclick="SwicthTab(1)"><h2>[Projects]</h2></button>
-                <button onclick="SwicthTab(2)"><h2>[Contact]</h2></button>
-            </div>
+        <div id="menuA">
+            <div id="menuB"></div>
         </div>
-        <div class="border"></div>
-        <div class="spacer"></div>
-        <div class="profile">
-            <div class="left" style="flex: 40%;">
-                <img id="PFP" src="https://avatars.githubusercontent.com/u/166549260" onclick="Profile()">
-                <h1>Clyde Bair</h1>
-            </div>
-            <div class="mobile"></div>
-            <div class="right" style="flex: 60%;">
-                <div id="about">
-                    <h3>My name is Clyde Bair, I am a Web/Software Developer. I like to learn many different things including programming languages, I tend to come up with many different ideas for projects/programs that I like sharing with my friends.<br><br>List of Languages</h3>
-                    <div class="icons">
-                        <img src="CSharp.png" alt="C#" title="C#">
-                        <img src="JS.png" alt="JavaScript" title="JavaScript">
-                        <img src="HTML.png" alt="Lua" title="HTML">
+        <div class="dashboard">
+            <div class="blades" id="b0" onclick="bladeNavClick(0)"><div class="metal" id="m0"><div class="label" id="l0"><h1 id="h1_0">Clyde_Bair</h1></div><div class="labelCorner" id="lc0"></div></div></div>
+            <div class="window" id="w0">
+                <div class="screen" id="s0">
+                    <div class="banner top"></div>
+                    <div class="contents" id="sc0">
+                        <div class="windowUI" id="wui0">
+                            <div class="welcome">
+                                <div class="information">
+                                    <h1>Welcome to Clyde Bair's Website!</h1>
+                                </div>
+                                <div class="flag">
+                                    <div class="portrait"></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    <div class="banner bottom"></div>
                 </div>
-                <div id="projects">
-                    <iframe src="projects.html" frameborder="0" width="100%" height="300px"></iframe>
+            </div>
+            <div class="blades" id="b1" onclick="bladeNavClick(1)"><div class="metal" id="m1"><div class="label" id="l1"><h1 id="h1_1">About</h1></div><div class="labelCorner" id="lc1"></div></div></div>
+            <div class="window" id="w1">
+                <div class="screen" id="s1">
+                    <div class="banner top"></div>
+                    <div class="contents" id="sc1">
+                        <div class="windowUI" id="wui1">
+                            <!--vvv WINDOW UI vvv-->
+                            <div class="trayTop">
+                                <div class="profile">
+                                    <div class="gamertag">
+                                        <div class="username"><h1>Clyde Bair</h1></div>
+                                        <div class="userinfo">
+                                            <div class="pfp">
+                                                <div class="icon" id="i1"></div>
+                                            </div>
+                                            <div class="stats">
+                                                <div class="projects">
+                                                    <h1 class="statText sTL">Projects</h1>
+                                                    <h1 class="statText sTR" id="statPRJ1"></h1>
+                                                </div>
+                                                <div class="coderscore">
+                                                    <h1 class="statText sTL">Coderscore</h1>
+                                                    <h1 class="statText sTR" id="statCDS1"></h1>
+                                                </div>
+                                                <div class="brainIQ">
+                                                    <h1 class="statText sTL">Brain IQ</h1>
+                                                    <h1 class="statText sTR" id="statBIQ1"></h1>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="logo">
+                                    <div class="zetchernet"></div>
+                                </div>
+                            </div>
+                            <div class="trayMid">
+                                <div class="navigation">
+                                    <div class="windowButton win1" id="b1w0" onmouseover="windowNavHover(0)"><h1>Information</h1></div>
+                                    <div class="noButton"></div>
+                                    <div class="noButton"></div>
+                                    <div class="noButton"></div>
+                                </div>
+                                <div class="information">
+                                    <h1>My name is Clyde Bair, I am a Web/Software Developer. I like to learn many different things including programming languages, I tend to come up with many different ideas for projects/programs that I like sharing with my friends.</h1>
+                                </div>
+                            </div>
+                            <div class="trayBot"></div>
+                            <!--^^^ WINDOW UI ^^^-->
+                        </div>
+                    </div>
+                    <div class="banner bottom"></div>
                 </div>
-                <div id="contact">
-                    <h3>E-Mail: Clyde.Bair@mscoding.org</h3>
+            </div>
+            <div class="blades" id="b2" onclick="bladeNavClick(2)"><div class="metal" id="m2"><div class="label" id="l2"><h1 id="h1_2">Experiences</h1></div><div class="labelCorner" id="lc2"></div></div></div>
+            <div class="window" id="w2">
+                <div class="screen" id="s2">
+                    <div class="banner top"></div>
+                    <div class="contents" id="sc2">
+                        <div class="windowUI" id="wui2">
+                            <!--vvv WINDOW UI vvv-->
+                            <div class="trayTop">
+                                <div class="profile">
+                                    <div class="gamertag">
+                                        <div class="username"><h1>Clyde Bair</h1></div>
+                                        <div class="userinfo">
+                                            <div class="pfp">
+                                                <div class="icon" id="i2"></div>
+                                            </div>
+                                            <div class="stats">
+                                                <div class="projects">
+                                                    <h1 class="statText sTL">Projects</h1>
+                                                    <h1 class="statText sTR" id="statPRJ2"></h1>
+                                                </div>
+                                                <div class="coderscore">
+                                                    <h1 class="statText sTL">Coderscore</h1>
+                                                    <h1 class="statText sTR" id="statCDS2"></h1>
+                                                </div>
+                                                <div class="brainIQ">
+                                                    <h1 class="statText sTL">Brain IQ</h1>
+                                                    <h1 class="statText sTR" id="statBIQ2"></h1>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="logo">
+                                    <div class="zetchernet"></div>
+                                </div>
+                            </div>
+                            <div class="trayMid">
+                                <div class="navigation">
+                                    <div class="windowButton win2" id="b2w0" onmouseover="windowNavHover(0)" onclick="menuOpen()"><h1>Languages</h1></div>
+                                    <div class="windowButton win2" id="b2w1" onmouseover="windowNavHover(1)" onclick="menuOpen()"><h1>Frameworks</h1></div>
+                                    <div class="windowButton win2" id="b2w2" onmouseover="windowNavHover(2)" onclick="menuOpen()"><h1>Software</h1></div>
+                                    <div class="noButton"></div>
+                                </div>
+                                <div class="information">
+                                    <h1>View my various Experiences with coding along with coding/non-coding related software.</h1>
+                                </div>
+                            </div>
+                            <div class="trayBot"></div>
+                            <!--^^^ WINDOW UI ^^^-->
+                        </div>
+                        <div class="menuUI" id="mui2w0">
+                            <div class="menuNavigation">
+                                <div class="menuButton min2w0" id="b2w0m0" onmouseover="menuNavHover(0)"><h1>C#</h1></div>
+                                <div class="menuButton min2w0" id="b2w0m1" onmouseover="menuNavHover(1)"><h1>JavaScript</h1></div>
+                                <div class="menuButton min2w0" id="b2w0m2" onmouseover="menuNavHover(2)"><h1>HTML</h1></div>
+                                <div class="menuButton min2w0" id="b2w0m3" onmouseover="menuNavHover(3)"><h1>CSS</h1></div>
+                                <div class="noButton"></div>
+                                <div class="noButton"></div>
+                                <div class="noButton"></div>
+                                <div class="menuButton min2w0" id="b2w0m4" onmouseover="menuNavHover(4)" onclick="menuClose()"><h1>Exit Menu</h1></div>
+                            </div>
+                            <div class="information"></div>
+                        </div>
+                        <div class="menuUI" id="mui2w1">
+                            <div class="menuNavigation">
+                                <div class="menuButton min2w1" id="b2w1m0" onmouseover="menuNavHover(0)"><h1>Bootstrap</h1></div>
+                                <div class="noButton"></div>
+                                <div class="noButton"></div>
+                                <div class="noButton"></div>
+                                <div class="noButton"></div>
+                                <div class="noButton"></div>
+                                <div class="noButton"></div>
+                                <div class="menuButton min2w1" id="b2w1m1" onmouseover="menuNavHover(1)" onclick="menuClose()"><h1>Exit Menu</h1></div>
+                            </div>
+                            <div class="information"></div>
+                        </div>
+                        <div class="menuUI" id="mui2w2">
+                            <div class="menuNavigation">
+                                <div class="menuButton min2w2" id="b2w2m0" onmouseover="menuNavHover(0)"><h1>Visual Studio Code</h1></div>
+                                <div class="menuButton min2w2" id="b2w2m1" onmouseover="menuNavHover(1)"><h1>RPGMaker 2003</h1></div>
+                                <div class="noButton"></div>
+                                <div class="noButton"></div>
+                                <div class="noButton"></div>
+                                <div class="noButton"></div>
+                                <div class="noButton"></div>
+                                <div class="menuButton min2w2" id="b2w2m2" onmouseover="menuNavHover(2)" onclick="menuClose()"><h1>Exit Menu</h1></div>
+                            </div>
+                            <div class="information"></div>
+                        </div>
+                    </div>
+                    <div class="banner bottom"></div>
+                </div>
+            </div>
+            <div class="blades" id="b3" onclick="bladeNavClick(3)"><div class="metal" id="m3"><div class="label" id="l3"><h1 id="h1_3">Projects</h1></div><div class="labelCorner" id="lc3"></div></div></div>
+            <div class="window" id="w3">
+                <div class="screen" id="s3">
+                    <div class="banner top"></div>
+                    <div class="contents" id="sc3">
+                        <div class="windowUI" id="wui3">
+                            <!--vvv WINDOW UI vvv-->
+                            <div class="trayTop">
+                                <div class="profile">
+                                    <div class="gamertag">
+                                        <div class="username"><h1>Clyde Bair</h1></div>
+                                        <div class="userinfo">
+                                            <div class="pfp">
+                                                <div class="icon" id="i3"></div>
+                                            </div>
+                                            <div class="stats">
+                                                <div class="projects">
+                                                    <h1 class="statText sTL">Projects</h1>
+                                                    <h1 class="statText sTR" id="statPRJ3"></h1>
+                                                </div>
+                                                <div class="coderscore">
+                                                    <h1 class="statText sTL">Coderscore</h1>
+                                                    <h1 class="statText sTR" id="statCDS3"></h1>
+                                                </div>
+                                                <div class="brainIQ">
+                                                    <h1 class="statText sTL">Brain IQ</h1>
+                                                    <h1 class="statText sTR" id="statBIQ3"></h1>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="logo">
+                                    <div class="zetchernet"></div>
+                                </div>
+                            </div>
+                            <div class="trayMid">
+                                <div class="navigation">
+                                    <div class="windowButton win3" id="b3w0" onmouseover="windowNavHover(0)" onclick="menuOpen()"><h1>Github Websites</h1></div>
+                                    <div class="windowButton win3" id="b3w1" onmouseover="windowNavHover(1)" onclick="menuOpen()"><h1>Github Software</h1></div>
+                                    <div class="noButton"></div>
+                                    <div class="noButton"></div>
+                                </div>
+                                <div class="information">
+                                    <h1>View various Projects I have worked on as both Back-End and Front-End.</h1>
+                                </div>
+                            </div>
+                            <div class="trayBot"></div>
+                            <!--^^^ WINDOW UI ^^^-->
+                        </div>
+                        <div class="menuUI" id="mui3w0">
+                            <div class="menuNavigation">
+                                <div class="menuButton min3w0" id="b3w0m0" onmouseover="menuNavHover(0)" onclick="location.href='https://clyde-bair.github.io/'"><h1>Home Page</h1></div>
+                                <div class="menuButton min3w0" id="b3w0m1" onmouseover="menuNavHover(1)"><h1>Calculator</h1></div>
+                                <div class="noButton"></div>
+                                <div class="noButton"></div>
+                                <div class="noButton"></div>
+                                <div class="noButton"></div>
+                                <div class="noButton"></div>
+                                <div class="menuButton min3w0" id="b3w0m2" onmouseover="menuNavHover(2)" onclick="menuClose()"><h1>Exit Menu</h1></div>
+                            </div>
+                            <div class="information"></div>
+                        </div>
+                        <div class="menuUI" id="mui3w1">
+                            <div class="menuNavigation">
+                                <div class="menuButton min3w1" id="b3w1m0" onmouseover="menuNavHover(0)" onclick="location.href='https://github.com/Clyde-Bair/OutGuess'"><h1>OutGuess</h1></div>
+                                <div class="menuButton min3w1" id="b3w1m1" onmouseover="menuNavHover(1)" onclick="location.href='https://github.com/Clyde-Bair/RPGMaker'"><h1>RPGMaker</h1></div>
+                                <div class="menuButton min3w1" id="b3w1m2" onmouseover="menuNavHover(2)" onclick="location.href='https://github.com/Clyde-Bair/CircleWorld'"><h1>CircleWorld</h1></div>
+                                <div class="menuButton min3w1" id="b3w1m3" onmouseover="menuNavHover(3)" onclick="location.href='https://github.com/Clyde-Bair/GrayscaleViewer'"><h1>GrayscaleViewer</h1></div>
+                                <div class="menuButton min3w1" id="b3w1m4" onmouseover="menuNavHover(4)" onclick="location.href='https://github.com/Clyde-Bair/HTML-Generator'"><h1>HTML-Generator</h1></div>
+                                <div class="noButton"></div>
+                                <div class="noButton"></div>
+                                <div class="menuButton min3w1" id="b3w1m5" onmouseover="menuNavHover(5)" onclick="menuClose()"><h1>Exit Menu</h1></div>
+                            </div>
+                            <div class="information"></div>
+                        </div>
+                    </div>
+                    <div class="banner bottom"></div>
+                </div>
+            </div>
+            <div class="blades" id="b4" onclick="bladeNavClick(4)"><div class="metal" id="m4"><div class="label" id="l4"><h1 id="h1_4">Links</h1></div><div class="labelCorner" id="lc4"></div></div></div>
+            <div class="window" id="w4">
+                <div class="screen" id="s4">
+                    <div class="banner top"></div>
+                    <div class="contents" id="sc4">
+                        <div class="windowUI" id="wui4">
+                            <div class="links">
+                                <div class="navigation">
+                                    <div class="windowButton win4" id="b4w0" onmouseover="windowNavHover(0)"><h1>E-Mail</h1></div>
+                                    <div class="windowButton win4" id="b4w1" onmouseover="windowNavHover(1)" onclick="location.href='https://github.com/Clyde-Bair'"><h1>Github</h1></div>
+                                    <div class="noButton"></div>
+                                    <div class="noButton"></div>
+                                    <div class="noButton"></div>
+                                    <div class="noButton"></div>
+                                    <div class="noButton"></div>
+                                    <div class="noButton"></div>
+                                </div>
+                                <div class="information">
+                                    <h1>If you wish to contact me over anything, find my various Social Media accounts and dont be afraid to reach out.</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="banner bottom"></div>
                 </div>
             </div>
         </div>
-        <div class="spacer"></div>
     </div>
 </body>
 </html>

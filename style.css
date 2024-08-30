@@ -1,104 +1,255 @@
-.bgvideo {
-    filter: saturate(200%);
-    position: fixed;
-    margin: auto;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    z-index: -1;
-}
 body {
-    margin: 0px;
-}
-button {
-    background-color: transparent;
-    border: 0px;
-}
-h1, h2, h3, h4, h5, p {
-    color: white;
-    margin: 0px;
-}
-.spacer {
-    height: 75px;
-}
-.navbar {
-    border-bottom: 2px solid rgba(255,255,255,.5);
+    overflow: hidden;
+    font-family: monospace;
+    margin: 0;
 }
 .container {
-    background-color: rgba(0, 0, 32, .75);
+    width: 100%;
+    height: 100%;
+}
+/*The Menu UI*/
+#menuA {
+    background-color: #222;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+#menuB {
+    background-color: #555;
+    height: 80%;
+    margin-top: 10vh;
+}
+/*The Blades UI*/
+.dashboard {
+    display: flex;
+    position: relative;
+}
+.blades {
+    cursor: pointer;
+    background-color: #888;
+    box-shadow: .5vw 0px 5px rgba(0,0,0,.5), -.5vw 0px 5px rgba(0,0,0,.5);
+    display: flex;
+    width: 5%;
+    height: 100vh;
+    transition: all .2s linear;
     z-index: 0;
 }
-.navbar .buttons h2 {
-    text-decoration: none;
+.metal {
+    background-color: #CCC;
+    background-image: -moz-linear-gradient(right, #DDD, #BBB);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    max-width: 80%;
+    flex: 1;
 }
-@media screen and (max-width: 799px) {
-    .navbar .logo {
-        text-align: center;
-    }
-    .navbar .buttons {
-        text-align: center;
-    }
-    .mobile {
-        height: 75px;
-    }
+.label {
+    background-color: #888;
+    width: 80%;
+    flex: .5;
+    transition: all .2s linear;
 }
-@media screen and (min-width: 800px) {
-    .navbar .logo {
-        margin-left: 25px;
-    }
-    .navbar .buttons {
-        margin-right: 25px;
-    }
-    .container {
-        width: 60%;
-        margin-left: 20%;
-        margin-right: 20%;
-    }
-    .navbar .buttons {
-        display: contents;
-        margin-left: auto;
-    }
-    .navbar, .profile {
-        display: flex;
-    }
-    .navbar .logo {
-        flex: 25%;
-    }
-    .navbar .buttons {
-        flex: 75%;
-    }
-    .mobile {
-        height: 0px;
-    }
+.label h1 {
+    rotate: 90deg;
+    margin: 50% 0 0 0;
+    font-size: 2vw;
 }
-#PFP {
-    border-radius: 100%;
+.labelCorner {
+    background-color: #888;
+    width: 80%;
+    flex: .15;
+    transition: all .2s linear;
+}
+/*The Window UI*/
+.window {
+    width: 0%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.screen {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: all .2s linear;
+}
+.top {
+    box-shadow: 0px 5vh 5vh inset rgba(255,255,255,.3), 0px -1vh 1vh inset rgba(0,0,0,.25);
+    flex: 10%;
+}
+.contents {
+    flex: 80%;
+}
+.bottom {
+    box-shadow: 0px -5vh 5vh inset rgba(255,255,255,.1), 0px 1vh 1vh inset rgba(0,0,0,.25);
+    flex: 10%;
+}
+
+.windowUI {
+    display: none;
+    flex-direction: column;
+    width: 95%;
+    height: 95%;
+    margin-top: 2vh;
+    margin-left: 2vw;
+    transition: all .5s linear;
+}
+.menuUI {
+    display: none;
+    width: 95%;
+    height: 95%;
+    margin-top: 2vh;
+    margin-left: 2vw;
+    transition: all .5s linear;
+}
+.trayTop {
+    display: flex;
+    flex: 30%;
+}
+.profile, .logo {
+    flex: 50%;
+}
+.gamertag {
+    display: flex;
+    flex-direction: column;
+    border: .5vh solid rgba(0,0,0,.5);
+    box-shadow: 1vh 1vh 1vh rgba(255,255,255,.25) inset, -1vh -1vh 1vh rgba(255,255,255,.25) inset;
     width: 90%;
-    height: auto;
+    height: 90%;
+    margin-left: calc(2vw - .5vh);
+    margin-top: 1vh;
 }
-.icons img {
-    width: 20%;
-    height: auto;
-    margin-left: 4px;
-    margin-right: 4px;
-    margin-top: 10px;
+.username {
+    background-image: -moz-linear-gradient(left, rgba(0,0,0,.25), transparent);
+    flex: 25%
 }
-.left, .right {
-    text-align: center;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: 25px;
-    margin-right: 25px;
+.username h1 {
+    cursor: default;
+    margin: 0;
+    margin-left: .5vw;
+    font-size: 4vh;
 }
-#about {
-    display: block;
+.userinfo {
+    display: flex;
+    flex: 75%
 }
-#projects {
-    display: none;
+.pfp {
+    display: flex;
+    flex: 25%;
 }
-#contact {
-    display: none;
+.icon {
+    flex: 1;
+    background-image: url(https://avatars.githubusercontent.com/u/166549260);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-style: inset;
+    border-width: .5vh;
+    border-color: rgba(0,0,0,.75);
+    align-self: center;
+    width: 75vh;
+    height: 100vh;
+    max-width: 12vh;
+    max-height: 12vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+.stats {
+    display: flex;
+    flex-direction: column;
+    flex: 75%;
+}
+.projects, .coderscore, .brainIQ {
+    flex: 1;
+}
+.statText {
+    cursor: default;
+    margin: 0;
+    font-size: 4vh;
+}
+.sTL {
+    float: left;
+}
+.sTR {
+    float: right;
+    margin-right: 1vw;
+}
+.zetchernet {
+    background-image: url(./logo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    width: 90%;
+    height: 90%;
+    margin-left: 2vw;
+    margin-top: 1vh;    
+}
+
+.trayMid {
+    display: flex;
+    flex: 50%
+}
+.navigation, .information, .menuNavigation {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    flex: 50%;
+}
+.windowButton, .menuButton {
+    cursor: pointer;
+    flex: 1;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    transition: all .2s linear;
+}
+.noButton {
+    flex: 1;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    border-right: .5vh solid rgba(0,0,0,.5);
+}
+.information h1 {
+    cursor: default;
+    margin: 0;
+    font-size: 4vh;
+}
+.windowButton h1, .menuButton h1 {
+    cursor: pointer;
+    font-size: 4vh;
+    margin: 2vh 0 0 1vw;
+}
+.noButton {
+    flex: 1;
+}
+
+.trayBot {
+    flex: 20%;
+}
+
+.welcome, .links {
+    display: flex;
+    flex: 1;
+}
+.flag {
+    display: flex;
+    flex: 50%
+}
+.portrait {
+    background-image: url(./welcome.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    flex: 1;
+    margin: auto;
+    align-self: center;
+    width: 75vh;
+    height: 100vh;
+    max-width: 45vh;
+    max-height: 70vh;
+    border: .5vh solid rgba(0,0,0,.5);
+    box-shadow: 2vh 2vh 2vh rgba(255,255,255,.5) inset, -2vh -2vh 2vh rgba(255,255,255,.5) inset;
+}
+.menuUI {
+    opacity: 0%;
+    transition: all .5s linear;
 }
